@@ -1,0 +1,406 @@
+<div class="hero">
+    <div class="ovarlay"></div>
+    <!-- first section -->
+    <div class="myContent mydisplayflex">
+        <div class="mainImg">
+            <img src="../../assets/img/icon/Prov.png" alt="Prov" class="Prov">
+        </div>
+        <div>
+            <span class="artist">Artist</span>
+            <h2>David Bowie</h2>
+
+        </div>
+
+        <div class="followicon-colecthion">
+            <div class="inputcontent">
+                <img src="../../assets/img/icon/Search 20.png" alt="Search" class="mysearchicon">
+                <input (keyup)="onKey($event,mydeleteicon)" class=" myinput" #inputvalue>
+                <img (click)="restthevalue(inputvalue,mydeleteicon)" src=" ../../assets/img/icon/Add.png" alt="Search"
+                    class="mydeleteicon displaynone" #mydeleteicon>
+            </div>
+
+            <img class="followicon" src="../../assets/img/icon/FOLLOW.png" alt="FOLLOW">
+            <img class="displaynone followicon" src="../../assets/img/icon/FOLLOWadd.png" alt="FOLLOWadd">
+            <img src="../../assets/img/icon/MORE.png" alt="MORE" class="followicon">
+
+        </div>
+
+    </div>
+    <!-- taps -->
+    <mat-tab-group mat-align-tabs="center" class="mytaps">
+
+        <mat-tab label="OVERVIEW">
+            <div class="taps ">
+
+                <!-- taps TITTLES -->
+                <div class="mytitles">
+                    <h4 class="mytitle"> TITTLE</h4>
+                    <h4 class="mytitle">ARTIST</h4>
+                    <h4 class="mytitle">ALBUM</h4>
+                    <h4 class="mytitle">TIME</h4>
+                    <h4 class="mytitle"><img src="../../assets/img/icon/Show.png" alt=""></h4>
+                </div>
+                <!-- the Popular songs -->
+                <div *ngFor="let item; of PopularSongs " class="mysongs">
+                    <ng-template [ngIf]="item.show">
+                        <div class="mysong">
+                            <div>
+                                <span class="phone">{{item.id}}</span>
+                                <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
+                                <span class="tittle">{{item.tittle}}</span>
+                            </div>
+                        </div>
+
+                        <div class="mysong phone">
+                            <h5>{{item.artist}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.album}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.time}}</h5>
+                        </div>
+                        <div class="mysong">
+                            <img class="icon" src="../../assets/img/icon/Add to Favorite (web).png" alt="">
+                            <img class="icon" src="../../assets/img/icon/Add.png" alt="">
+                        </div>
+
+                    </ng-template>
+                </div>
+            </div>
+
+
+            <button class="sHOWMORE">SHOW MORE</button>
+        </mat-tab>
+
+        <!-- 
+        <mat-tab label="ABOUT">
+            <div class="taps ">
+                <p class="PopularSongs">Popular songs</p>
+                <div *ngFor="let item; of PopularSongs " class="mysongs">
+                    <ng-template [ngIf]="item.show">
+                        <div class="mysong">
+                            <div>
+                                <span class="phone">{{item.id}}</span>
+                                <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
+                                <span class="tittle">{{item.tittle}}</span>
+                            </div>
+                        </div>
+
+                        <div class="mysong phone">
+                            <h5>{{item.artist}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.album}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.time}}</h5>
+                        </div>
+                        <div class="mysong">
+                            <img class="icon" src="../../assets/img/icon/Add to Favorite (web).png" alt="">
+                            <img class="icon" src="../../assets/img/icon/Add.png" alt="">
+                        </div>
+
+                    </ng-template>
+                </div>
+            </div>
+            <button class="sHOWMORE">SHOW MORE</button>
+        </mat-tab>
+        <mat-tab label="FANS ALSO LIKE">
+            <div class="taps ">
+                <p class="PopularSongs">Popular songs</p>
+                <div *ngFor="let item; of PopularSongs " class="mysongs">
+                    <ng-template [ngIf]="item.show">
+                        <div class="mysong">
+                            <div>
+                                <span class="phone">{{item.id}}</span>
+                                <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
+                                <span class="tittle">{{item.tittle}}</span>
+                            </div>
+                        </div>
+
+                        <div class="mysong phone">
+                            <h5>{{item.artist}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.album}}</h5>
+                        </div>
+                        <div class="mysong phone">
+                            <h5>{{item.time}}</h5>
+                        </div>
+                        <div class="mysong">
+                            <img class="icon" src="../../assets/img/icon/Add to Favorite (web).png" alt="">
+                            <img class="icon" src="../../assets/img/icon/Add.png" alt="">
+                        </div>
+
+                    </ng-template>
+                </div>
+            </div>
+            <button class="sHOWMORE">SHOW MORE</button>
+        </mat-tab> -->
+
+    </mat-tab-group>
+</div>
+<!-- </div> -->
+
+
+<style>
+    .taps {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .hero {
+        background-image: url(../../assets/img/songs/Bowiebacground.png);
+        background-position: center center;
+        background-size: cover;
+        /* height: 80vh; */
+        position: relative;
+        color: #fff
+            /* margin-top: -50px; */
+    }
+
+    .ovarlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background: #161A1A;
+        -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgb(16, 21, 37)), to(rgb(64 92 177 / 65%)));
+    }
+
+
+
+    .mat-ripple:not(:empty) {
+        color: #fff;
+    }
+
+    .mainImg {
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        background-image: url(../../assets/img/songs/Bowie.png);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .mainImg {
+        position: relative;
+
+    }
+
+    .Prov {
+        position: absolute;
+        right: 0;
+        top: 15%;
+        width: 32px;
+    }
+
+    .displaynone {
+        display: none;
+    }
+
+    .displayblock {
+        display: inline-block;
+    }
+
+    .mydisplayflex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 50px;
+        margin: 35px 0;
+    }
+
+    .artist {
+        font-size: 16px;
+        /* margin-bottom: 200px; */
+    }
+
+    .shuffle {
+        background: rgb(45, 155, 239);
+        background: linear-gradient(90deg, rgba(45, 155, 239, 1) 73%, rgba(164, 93, 218, 1) 100%);
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        width: 188px;
+        height: 40px;
+        margin-right: 20px;
+        margin-top: 0;
+
+    }
+
+    .followicon {
+        margin-right: 10px;
+
+    }
+
+
+    .img {
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 10px;
+
+    }
+
+
+
+
+
+    .PopularSongs {
+        margin-left: 70px;
+    }
+
+
+
+    .followicon-colecthion {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .inputcontent {
+        position: relative;
+    }
+
+    .myinput {
+        background-color: #898B91;
+        width: 200px;
+        /* height: 40px; */
+        padding: 10px 30px;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        z-index: 1;
+        margin-right: 20px;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    .mysearchicon {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        left: 6px;
+    }
+
+    .mydeleteicon {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        right: 30px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+
+
+
+
+    .mytitles {
+        display: flex;
+        /* flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        color: #99999F;
+        font-size: 14px;
+        align-content: center; */
+
+    }
+
+    .mytitle {
+        width: calc(20% - 20px);
+        margin: 10px;
+        text-align: center;
+    }
+
+    .mysongs {
+        display: flex;
+        /* flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        font-size: 15px; */
+
+    }
+
+    .mysong {
+        width: calc(20% - 20px);
+        margin: 10px;
+        text-align: center;
+    }
+
+    .mysong .icon {
+        margin-right: 15px;
+        width: 19.75px;
+        height: 18px;
+    }
+
+
+
+
+
+
+    /* phone */
+
+    @media screen and (min-width: 320px) and (max-width: 900px) {
+
+
+        .mytitles {
+            display: none;
+        }
+
+        .phone {
+            display: none;
+        }
+
+        .mysongs {
+            justify-content: space-evenly;
+            align-items: center;
+            /* display: inline-grid; */
+        }
+
+
+        /* 
+        .PopularSongs {
+            text-align: center;
+            margin: 20px 0;
+        } */
+
+
+
+        .mydisplayflex {
+            display: inline-grid;
+            text-align: center;
+            /* margin: auto; */
+        }
+
+        .mainImg {
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+
+
+        .mysong {
+            width: calc(50% - 20px);
+        }
+
+
+    }
+</style>

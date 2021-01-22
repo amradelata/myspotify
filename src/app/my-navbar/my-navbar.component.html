@@ -1,0 +1,100 @@
+<nav>
+
+    <div class="displayflex">
+        <div class="displayflex rightsied">
+            <img (click)="goback()" class="Back" src="../../assets/img/icon/Back.png" alt="">
+
+
+            <img class="phone" src="../../assets/img/icon/Full Logo.png" alt="Logo">
+            <a class="phone" routerLink="/" routerLinkActive="active">Home</a>
+            <a class="phone" routerLink="/" routerLinkActive="active">Library</a>
+            <a class="phone" href="/">
+                <span class="spanbtn "></span>
+            </a>
+
+        </div>
+        <div>
+            <a routerLink="/account" routerLinkActive="active">
+                <span class="displayflex">
+                    <img src="../../assets/img/icon/Profle 30.png" alt="Profle">
+                    <span class="username">JohnDoe</span>
+                    <img src="../../assets/img/icon/Show.png" alt="Show">
+                </span>
+            </a>
+        </div>
+    </div>
+
+</nav>
+<style>
+    nav {
+
+        margin: 10px 35px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 99999999;
+    }
+
+    .displayflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    a {
+        color: #99999F;
+
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 20px;
+
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+
+
+
+    .username {
+        margin: 0 10px;
+    }
+
+    .mybutton {
+        border-radius: 5px;
+    }
+
+
+
+    .Back {
+        display: none;
+    }
+
+    .spanbtn {
+        background-image: url(../../assets/img/icon/Browse.png);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 5px 65px;
+
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 700px) {
+
+        .phone {
+            display: none;
+        }
+
+        .Back {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+
+
+    }
+</style>

@@ -1,0 +1,275 @@
+<div class="acocount ">
+    <div class="Content container">
+        <div class=" mysection displayflex">
+            <div class="firstsection displayflex">
+                <div class="userimg">
+                    <img src="../../assets/img/icon/Group 990.png" alt="">
+                    <div class="userPlus"></div>
+                </div>
+                <div class="username">
+                    <h3>John Doe</h3>
+                    <h4>Free Account</h4>
+                </div>
+            </div>
+
+
+            <button class="shuffle">GO TO PREMIUM</button>
+        </div>
+
+        <div class="Contact ">
+            <div class="mysection">
+                <h2>Contact</h2>
+                <div class="">
+                    <mat-form-field class="hafinput" appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="hafinput" appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                </div>
+                <div class=" ">
+                    <mat-form-field class="fullinput" appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com">
+                    </mat-form-field>
+                </div>
+
+                <div class="">
+                    <mat-form-field class="hafinput" appearance="fill">
+                        <mat-label>Male</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="hafinput" appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                </div>
+
+                <div class="">
+                    <mat-form-field class="followedinput" appearance="fill">
+                        <mat-label>Date of Bairtth</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="followedinput" appearance="fill">
+                        <mat-label>Month</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="followedinput" appearance="fill">
+                        <mat-label>Year</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                </div>
+
+                <div class="">
+                    <div>
+                        <h3>Facebook</h3>
+                        <h3>Google</h3>
+                    </div>
+                    <div>
+                        <p>Not Connected</p>
+                        <p>Not Connected</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="mysection">
+                <h2>Streaming</h2>
+                <span>Audio Quality (Premium feature)</span>
+                <hr class="new1">
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Normal (128 kb/s)</mat-radio-button>
+                    <mat-radio-button value="2">High (192 kb/s)</mat-radio-button>
+                    <mat-radio-button value="3">Highest (320 kb/s)</mat-radio-button>
+                </mat-radio-group>
+                <hr class="new1">
+            </div>
+
+            <div class=" mysection displayflex">
+
+                <div>
+                    <h2>Account</h2>
+                    <h3>Enable Browser Notifications</h3>
+                    <h3>Language</h3>
+                    <h3>Change password</h3>
+                    <h3>Add new account</h3>
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Support</p>
+                </div>
+                <div>
+                    <mat-slide-toggle></mat-slide-toggle>
+                    <p class="englesh">Englesh</p>
+                </div>
+            </div>
+            <div class="mysection">
+                <button class="sHOWMORE logoutbtn">LOG OUT</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .acocount {
+        background-color: #161A1A;
+        color: #fff;
+    }
+
+    .mysection {
+        margin: 50px 0;
+        padding-bottom: 35px;
+    }
+
+    .shuffle {
+        background: rgb(45, 155, 239);
+        background: linear-gradient(90deg, rgba(45, 155, 239, 1) 73%, rgba(164, 93, 218, 1) 100%);
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        width: 188px;
+        height: 40px;
+        /* margin-right: 20px;
+        margin-top: 0; */
+        cursor: pointer;
+        outline: none;
+
+    }
+
+    .Content {
+        padding-top: 100px;
+    }
+
+    .userimg {
+        position: relative;
+        background-color: #313131;
+        border-radius: 50%;
+        height: 85px;
+        width: 85px;
+        padding: 15px;
+        margin-right: 20px;
+    }
+
+    .userPlus {
+        background-image: url(../../assets/img/icon/Change.png);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        right: 0;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .firstmysection h3 {
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    .firstmysection h4 {
+        font-size: 16px;
+        color: #99999F;
+    }
+
+
+    .hafinput {
+        width: 50%;
+    }
+
+    .fullinput {
+        width: 100%;
+
+    }
+
+    .displayflex {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+    }
+
+    .followedinput {
+        width: 33.333%;
+    }
+
+    .mat-radio-button {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .logoutbtn {
+        padding: 10px 30px;
+    }
+
+    hr.new1 {
+        border: 1px solid rgb(51, 51, 51);
+
+    }
+
+    .englesh {
+        margin-top: 35px;
+    }
+
+    /* phone */
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+        .fullinput {
+            width: 100%;
+
+        }
+
+        .hafinput {
+            width: 100%;
+        }
+
+        .followedinput {
+            width: 100%;
+            /* text-align: center; */
+            margin: auto;
+        }
+
+        .acocount {
+            padding: 0 35px;
+        }
+
+        .firstsection,
+        .userimg {
+            margin: auto;
+            text-align: center;
+        }
+
+        .firstsection {
+            margin-bottom: 35px;
+        }
+
+        /* 
+        .shuffle {
+            position: absolute;
+
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        .mysection {
+            margin-top: 80px;
+
+        }
+
+        .displayflex {
+            display: block;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+        }
+    }
+</style>

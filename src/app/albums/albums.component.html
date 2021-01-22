@@ -1,0 +1,281 @@
+<div>
+
+    <div class="albums">
+        <div class="container">
+            <!-- container -->
+            <p class="suphead">Albums</p>
+            <div class="cards">
+                <!-- <div class="scrroll"> -->
+                <div class="mycard" *ngFor="let item; of albums ">
+                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
+                        <img src="../../assets/img/icon/Play.png" class="play" alt="Play">
+                    </div>
+                    <h4>{{item.name.slice(0, 20)+"...."}}</h4>
+                    <span>{{'Released:'+item.Released}}</span>
+                </div>
+                <!-- </div> -->
+
+
+
+            </div>
+            <button class="sHOWMORE">SHOW MORE</button>
+            <p class="suphead">Singles & EPs</p>
+            <div class="cards  ">
+                <div class="mycard" *ngFor="let item; of singles ">
+                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
+                        <img src="../../assets/img/icon/Play.png" class="play" alt="Play">
+                    </div>
+                    <h4>{{item.name.slice(0, 20)+".."}}</h4>
+                    <span>{{'Released:'+item.Released}}</span>
+                </div>
+
+
+
+            </div>
+            <button class="sHOWMORE">SHOW MORE</button>
+            <p class="suphead">Appears in these playlists</p>
+            <div class="cards  ">
+                <div class="mycard" *ngFor="let item; of appearsIn ">
+                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
+                        <img src="../../assets/img/icon/Play.png" class="play" alt="Play">
+                    </div>
+                    <h4>{{item.name}}</h4>
+                    <span>{{'Released:'+item.Released}}</span>
+                </div>
+
+
+
+            </div>
+            <button class="sHOWMORE">SHOW MORE</button>
+            <p class="suphead">Fans Also Like</p>
+            <div class="cards center">
+
+                <div class="mycard" *ngFor="let item; of fansAlso  ">
+                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
+
+                    </div>
+                    <h4>{{item.name}}</h4>
+                    <span>{{item.Released}}</span>
+                    <div class="icon" [ngStyle]="{'backgroundImage':'url('+item.icon+')'}"></div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .suphead {
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .albums {
+        background-color: #161A1A;
+
+    }
+
+    .cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .mycard {
+        width: calc(16.6666666667% - 20px);
+        margin: 10px;
+    }
+
+    h4 {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-size: 14px;
+        color: #99999F;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .img:hover>.play {
+        opacity: 1;
+        transition: 0.60s;
+    }
+
+    .icon {
+        width: 14px;
+        height: 13px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .play {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+
+    @media screen and (min-width: 1144px) and (max-width: 1270px) {
+        .cards {
+            overflow: auto;
+            white-space: initial;
+            display: flex;
+            flex-flow: row;
+            /* flex-flow: wrap; */
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+    }
+
+    /* taplet */
+    /* @media screen and (min-width: 600px) and (max-width: 1350px) { */
+    /* @media all and (max-width: 1350px) and (min-width: 500px) {
+        .cards {
+            overflow: auto;
+            white-space: initial;
+            display: flex;
+            flex-flow: row;
+            
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mycard {
+            width: calc(50% - 20px);
+
+        }
+    } */
+
+    /* @media screen and (min-width: 320px) and (max-width: 1100px) { */
+
+    /* .cards {
+            overflow: auto;
+            white-space: nowrap;
+            flex-flow: row;
+        }
+
+        .mycard {
+            width: calc(25% - 20px);
+
+        }
+
+        .img {
+            width: 200px;
+        }
+
+        .suphead {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+
+    @media screen and (min-width: 1101px) and (max-width: 1300px) {
+        .mycard {
+            width: calc(20% - 20px);
+
+        } */
+    /* } */
+
+    /* Mobile devices. */
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+
+
+        .cards {
+            overflow: auto;
+            white-space: nowrap;
+            display: flex;
+            flex-flow: row;
+
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mycard {
+            width: calc(50% - 20px);
+
+        }
+
+        .img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .suphead {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+
+    /* iPads, Tablets */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+        .cards {
+            overflow: auto;
+            white-space: initial;
+            display: flex;
+            flex-flow: row;
+
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mycard {
+            width: calc(50% - 20px);
+
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+        .mycard {
+            width: calc(25% - 20px);
+
+        }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px) {
+        .albums {
+            background-color: rgb(21, 26, 23);
+        }
+
+        .mycard {
+            width: calc(25% - 20px);
+
+        }
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 1400px) {
+
+
+        .mycard {
+            width: calc(25% - 20px);
+
+        }
+    }
+</style>
