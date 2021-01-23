@@ -8,62 +8,62 @@ import { Component, OnInit } from '@angular/core';
 export class AlbumsComponent implements OnInit {
   albums = [
     {
-      "img": '../../assets/img/songs/1.png',
+      "img": '../../assets/img/songs2/01.jpg',
       "name": 'X – Los Angeles - dddddddddddddddddddddddddddddddddddddddddd',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/2.png',
+      "img": '../../assets/img/songs2/02.jpg',
       "name": ' Leonard Cohen – I’m Your Man',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/3.png',
+      "img": '../../assets/img/songs2/03.jpg',
       "name": 'Eric B. & Rakim – Paid in Full',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/4.png',
+      "img": '../../assets/img/songs2/04.jpg',
       "name": 'Lou Reed – The Blue Mask',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/5.png',
+      "img": '../../assets/img/songs2/05.png',
       "name": 'Black Flag – Damaged',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/6.png',
+      "img": '../../assets/img/songs2/06.jpg',
       "name": 'My Bloody Valentine – Isn’t Anything',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/7.png',
+      "img": '../../assets/img/songs2/07.jpg',
       "name": 'Depeche Mode – Music for the Masses',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/8.png',
+      "img": '../../assets/img/songs2/08.jpg',
       "name": 'Soft Boys – Underwater Moonlight',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/9.png',
+      "img": '../../assets/img/songs2/09.jpg',
       "name": 'The Blasters – Hard Line',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/10.png',
+      "img": '../../assets/img/songs2/10.jpg',
       "name": 'Dinosaur Jr. – You’re Living All Over Me',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/11.png',
+      "img": '../../assets/img/songs2/11.jpg',
       "name": 'The Replacements – Pleased to Meet Me',
       "Released": '15/02/2019'
     },
     {
-      "img": '../../assets/img/songs/12.png',
+      "img": '../../assets/img/songs2/12.jpg',
       "name": 'The Feelies – Crazy Rhythms',
       "Released": '15/02/2019'
     }

@@ -7,7 +7,7 @@
             <div class="cards">
                 <!-- <div class="scrroll"> -->
                 <div class="mycard" *ngFor="let item; of albums ">
-                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
+                    <div class="albumsimg" [ngStyle]="{'backgroundImage':'url('+item.img+')'}">
                         <img src="../../assets/img/icon/Play.png" class="play" alt="Play">
                     </div>
                     <h4>{{item.name.slice(0, 20)+"...."}}</h4>
@@ -115,6 +115,21 @@
         cursor: pointer;
     }
 
+    .albumsimg {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .albumsimg:hover>.play {
+        opacity: 1;
+        transition: 0.60s;
+    }
+
     .img:hover>.play {
         opacity: 1;
         transition: 0.60s;
@@ -137,68 +152,7 @@
         left: 5px;
     }
 
-    /* @media screen and (min-width: 1144px) and (max-width: 1270px) {
-        .cards {
-            overflow: auto;
-            white-space: initial;
-            display: flex;
-            flex-flow: row;
-            
-            justify-content: space-around;
-            align-items: center;
-        }
 
-
-    } */
-
-    /* taplet */
-    /* @media screen and (min-width: 600px) and (max-width: 1350px) { */
-    /* @media all and (max-width: 1350px) and (min-width: 500px) {
-        .cards {
-            overflow: auto;
-            white-space: initial;
-            display: flex;
-            flex-flow: row;
-            
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .mycard {
-            width: calc(50% - 20px);
-
-        }
-    } */
-
-    /* @media screen and (min-width: 320px) and (max-width: 1100px) { */
-
-    /* .cards {
-            overflow: auto;
-            white-space: nowrap;
-            flex-flow: row;
-        }
-
-        .mycard {
-            width: calc(25% - 20px);
-
-        }
-
-        .img {
-            width: 200px;
-        }
-
-        .suphead {
-            text-align: center;
-            padding: 20px 0;
-        }
-    }
-
-    @media screen and (min-width: 1101px) and (max-width: 1300px) {
-        .mycard {
-            width: calc(20% - 20px);
-
-        } */
-    /* } */
 
     /* Mobile devices. */
     @media screen and (min-width: 320px) and (max-width: 480px) {
