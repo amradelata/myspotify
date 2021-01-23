@@ -33,6 +33,7 @@
             <div class="taps ">
 
                 <!-- taps TITTLES -->
+
                 <div class="mytitles">
                     <h4 class="mytitle"> TITTLE</h4>
                     <h4 class="mytitle">ARTIST</h4>
@@ -41,11 +42,12 @@
                     <h4 class="mytitle"><img src="../../assets/img/icon/Show.png" alt=""></h4>
                 </div>
                 <!-- the Popular songs -->
+
                 <div *ngFor="let item; of PopularSongs " class="mysongs">
                     <ng-template [ngIf]="item.show">
-                        <div class="mysong">
+                        <div class="mysong tapimg">
                             <div>
-                                <span class="phone">{{item.id}}</span>
+
                                 <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
                                 <span class="tittle">{{item.tittle}}</span>
                             </div>
@@ -67,21 +69,22 @@
 
                     </ng-template>
                 </div>
+
             </div>
 
 
             <button class="sHOWMORE">SHOW MORE</button>
         </mat-tab>
 
-        <!-- 
+
         <mat-tab label="ABOUT">
             <div class="taps ">
-                <p class="PopularSongs">Popular songs</p>
+
                 <div *ngFor="let item; of PopularSongs " class="mysongs">
                     <ng-template [ngIf]="item.show">
                         <div class="mysong">
                             <div>
-                                <span class="phone">{{item.id}}</span>
+
                                 <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
                                 <span class="tittle">{{item.tittle}}</span>
                             </div>
@@ -108,12 +111,12 @@
         </mat-tab>
         <mat-tab label="FANS ALSO LIKE">
             <div class="taps ">
-                <p class="PopularSongs">Popular songs</p>
+
                 <div *ngFor="let item; of PopularSongs " class="mysongs">
                     <ng-template [ngIf]="item.show">
                         <div class="mysong">
                             <div>
-                                <span class="phone">{{item.id}}</span>
+
                                 <span class="img" [ngStyle]="{'backgroundImage':'url('+item.img+')'}"></span>
                                 <span class="tittle">{{item.tittle}}</span>
                             </div>
@@ -137,7 +140,7 @@
                 </div>
             </div>
             <button class="sHOWMORE">SHOW MORE</button>
-        </mat-tab> -->
+        </mat-tab>
 
     </mat-tab-group>
 </div>
@@ -145,12 +148,6 @@
 
 
 <style>
-    .taps {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-    }
-
     .hero {
         background-image: url(../../assets/img/songs/Bowiebacground.png);
         background-position: center center;
@@ -159,6 +156,12 @@
         position: relative;
         color: #fff
             /* margin-top: -50px; */
+    }
+
+    .tittle {
+        /* display: none; */
+        /* width: 500px; */
+        display: grid;
     }
 
     .ovarlay {
@@ -258,7 +261,6 @@
 
 
 
-
     .PopularSongs {
         margin-left: 70px;
     }
@@ -314,12 +316,7 @@
 
     .mytitles {
         display: flex;
-        /* flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        color: #99999F;
-        font-size: 14px;
-        align-content: center; */
+
 
     }
 
@@ -331,18 +328,18 @@
 
     .mysongs {
         display: flex;
-        /* flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        color: #fff;
-        font-size: 15px; */
+
 
     }
 
     .mysong {
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
         width: calc(20% - 20px);
         margin: 10px;
         text-align: center;
+
     }
 
     .mysong .icon {
@@ -350,6 +347,7 @@
         width: 19.75px;
         height: 18px;
     }
+
 
 
 
@@ -400,6 +398,7 @@
         .mysong {
             width: calc(50% - 20px);
         }
+
 
 
     }

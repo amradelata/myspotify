@@ -137,19 +137,19 @@
         left: 5px;
     }
 
-    @media screen and (min-width: 1144px) and (max-width: 1270px) {
+    /* @media screen and (min-width: 1144px) and (max-width: 1270px) {
         .cards {
             overflow: auto;
             white-space: initial;
             display: flex;
             flex-flow: row;
-            /* flex-flow: wrap; */
+            
             justify-content: space-around;
             align-items: center;
         }
 
 
-    }
+    } */
 
     /* taplet */
     /* @media screen and (min-width: 600px) and (max-width: 1350px) { */
@@ -210,7 +210,7 @@
             display: flex;
             flex-flow: row;
 
-            justify-content: space-around;
+            justify-content: start;
             align-items: center;
         }
 
@@ -240,7 +240,7 @@
             display: flex;
             flex-flow: row;
 
-            justify-content: space-around;
+            justify-content: start;
             align-items: center;
         }
 
@@ -248,13 +248,31 @@
             width: calc(50% - 20px);
 
         }
+
+        .suphead {
+            text-align: center;
+        }
     }
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
 
 
+        .suphead {
+            text-align: center;
+        }
+
+        .cards {
+            overflow: auto;
+            white-space: initial;
+            display: flex;
+            flex-flow: row;
+
+            justify-content: start;
+            align-items: center;
+        }
+
         .mycard {
-            width: calc(25% - 20px);
+            width: calc(50% - 20px);
 
         }
     }
